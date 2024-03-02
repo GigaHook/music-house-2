@@ -18,7 +18,6 @@
         "vue": "^3.4.0"
     },
     "dependencies": {
-        "laravel-precognition-vue": "^0.5.4",
         "vue-the-mask": "^0.11.1",
         "vuetify": "^3.5.6"
     }

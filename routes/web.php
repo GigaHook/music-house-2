@@ -28,13 +28,13 @@ defaultRoute('Location');
 Route::middleware('guest')->group(function() {
 	defaultRoute('Auth');
 	defaultRoute('Register');
-	Route::post('/login', [UserController::class, 'login'])
-		->name('Login')->middleware('precognitive');
-	Route::post('/register', [UserController::class, 'register'])->name('RegisterPost')->middleware('precognitive');
+	Route::post('/login', [UserController::class, 'login'])->name('Login');
+	Route::post('/register', [UserController::class, 'register'])->name('CreateUser');
 });
 
 Route::middleware('auth')->group(function() {
 	Route::get('/logout', [UserController::class, 'logout'])->name('Logout');
+	defaultRoute('Cart');
 });
 
 Route::middleware('admin')->group(function() {
